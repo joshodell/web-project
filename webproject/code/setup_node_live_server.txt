@@ -1,0 +1,36 @@
+(1)
+	- Launch file explorer
+	- Right-click "This PC" on the left and select propeties.
+	- On the left select "Advanced system settings"
+	- In the window titled "System Properties" select "Environment Variables..." on the advanced tab.
+	- In the window titled "Environment Variables" click new under "System variables".
+	- Variable name: ComSpecNode
+	- Variable value: C:\Windows\System32\cmd.exe /k "C:\Program Files\nodejs\nodevars.bat"
+	- Click "OK" to add the system variable. 
+
+(2) 
+	- In Visual Studio Code click setting under File->Preferences->Settings
+	- Add "terminal.external.windowsExec": "%ComSpecNode%" to your user setting on the right.
+	- CTRL + S to save changes.
+	- Close and re-open Visual Studio Code. 
+	- Right-click "index.html" in the Explorer side bar of Visual Studio Code then select "Open in Command Prompt".
+
+(3)
+	- In Command Prompt** type: live-server
+	- Press enter.*** 
+	- Page will auto refresh when you save your work in Visual Studio Code.  
+  	
+
+**If step 1 worked the cmd promp should read something like this. 
+---------------------------------------------------------------------------------
+Your environment has been set up for using Node.js 6.10.0 (x64) and npm.	|
+										|				
+C:\Users\Name\www>								|	
+										|
+										|
+---------------------------------------------------------------------------------
+
+***node should launch your default browser automatically and start the server.
+   The page being serverd will be available at 127.0.0.1:8080 while the server
+   is running. If the server doesnt start at all make sure you have live-server
+   installed by running: npm install -g live-server
